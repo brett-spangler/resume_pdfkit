@@ -15,6 +15,15 @@ def save_rendered_footer(html: str, output_path: str = "rendered_footer.html"):
         f.write(html)
 
 def main():
+    # If output file exists, rename it with _YYYYMMDD_HHMMSS before generating new PDF
+    if os.path.exists(args.output):
+        creation_time = os.path.getctime(args.output)
+        from datetime import datetime
+        timestamp = datetime.fromtimestamp(creation_time).strftime("%Y%m%d_%H%M%S")
+        base, ext = os.path.splitext(args.output)
+        archived_name = f"{base}_{timestamp}{ext}"
+        os.rename(args.output, archived_name)
+        
     parser = argparse.ArgumentParser(description="Generate Brett Spangler's resume as a PDF.")
     parser.add_argument("--version", type=str, default="automation", help="Resume version: automation, backend, default")
     parser.add_argument("--output", type=str, default="output/Brett_Spangler_Resume.pdf", help="Output PDF path")
