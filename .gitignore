@@ -1,0 +1,38 @@
+
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# VS Code settings
+.vscode/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Build and distribution artifacts
+build/
+
+*.egg-info/
+
+# Output PDFs and temp files
+output/
+rendered_footer.html
+*.pdf
+!resume_versions/*.pdf
+
+# Logs and temp
+*.log
+*.tmp
+*.bak
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebooks (if any)
+.ipynb_checkpoints/
+.cache

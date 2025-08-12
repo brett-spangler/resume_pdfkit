@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Brett Spangler Resume</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            margin-left: 2rem;
+            margin-right: 2rem;
+            color: #333;
+        }
+        .resume-body {
+            max-width: 800px;
+            margin: 0 auto; /* centers horizontally */
+            padding: 0 2rem; /* adds inner spacing */
+        }
+        h1, h2 {
+            color: #2C3E50;
+            margin-bottom: 5px;
+        }
+        h1 {
+            font-size: 28px;
+        }
+        h2 {
+            font-size: 20px;
+            margin-top: 30px;
+        }
+        p, li {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .section {
+            margin-bottom: 25px;
+            page-break-inside: avoid;
+        }
+        .core-tech {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Brett Spangler</h1>
+<p><em>Senior Automation & Data Integration Developer</em><br>
+Fenton, MI · {{phone}} · {{email}}<br>
+<a href={{linkedin}}>LinkedIn</a> · <a href={{github}}>GitHub</a></p>
+
+<div class="resume-body">
+    <div class="section">
+        <h2>Professional Summary</h2>
+        <p>Senior Automation and Data Integration Developer with 12+ years of experience designing Python-based solutions for manufacturing, reporting, and backend workflows. Proven track record in automating email alerts using <code>smtplib</code>, integrating REST APIs with <code>requests</code>, and building performance monitoring dashboards across Ignition and MSSQL environments. Skilled in refactoring legacy code, implementing lightweight CI/CD pipelines, and mentoring junior developers in cross-functional teams. Adept at bridging scripting, data engineering, and operational needs.</p>
+        <p class="core-tech">Core Technologies: Python · SQL · Git · Ignition · MSSQL · REST APIs · CI/CD · VBA · pytest · Power BI</p>
+    </div>
+
+    <hr style="margin-top:40px;">
+
+    <div class="section">
+        <h2>Professional Experience</h2>
+        <p><strong>Data Integration Engineer</strong><br><em>Magna Electronics · Holly, MI · June 2016 – May 2024</em></p>
+        <ul>
+            <li>Developed Python and SQL solutions to automate reporting, backend data workflows, and performance tracking across 60+ manufacturing cells.</li>
+            <li>Delivered internal tooling and dashboards used daily by 300+ staff, enabling real-time monitoring across 150+ production cells.</li>
+            <li>Refactored legacy Python scripts for improved performance, modularity, and maintainability. Used <code>pytest</code> to verify function behavior.</li>
+            <li>Implemented lightweight CI/CD workflow using Git and scheduled Python scripts for server-side updates.</li>
+            <li>Automated email alerting workflows using Python, including dynamic content generation and conditional triggers.</li>
+            <li>Designed and maintained performance monitoring solutions for Ignition servers and MSSQL databases.</li>
+            <li>Mentored junior developers and led Git adoption for modular code reuse.</li>
+        </ul>
+
+        <p><strong>Automation & Reporting Developer</strong><br><em>Magna Electronics · Holly, MI · April 2013 – June 2016</em></p>
+        <ul>
+            <li>Built VB.NET/MSSQL tools to digitize downtime tracking and automate MTBF, MTTR, and OEE reporting.</li>
+            <li>Developed automated Excel reports using VBA scripting with dynamic formatting and scheduled exports.</li>
+            <li>Integrated VB.NET, SQL, and tag data for PDF reporting via Sepasoft’s Ignition Reporting Module.</li>
+            <li>Led deployment of downtime tracking tools across 20+ production lines, reducing manual entry by 80%.</li>
+        </ul>
+
+        <p><strong>Business Automation Intern</strong><br><em>Magna Electronics · Holly, MI · Jan 2012 – Apr 2013</em></p>
+        <ul>
+            <li>Refactored legacy reporting solutions and supported manufacturing operations.</li>
+            <li>Built Excel/VBA tool that automated utilization reporting, saving 10–15 labor days per month.</li>
+            <li>Collaborated with cross-functional teams to standardize reporting workflows and train operators on tool usage.</li>
+        </ul>
+    </div>
+
+    <hr style="margin-top:40px;">
+
+    <div class="section">
+        <h2>Selected Projects</h2>
+        <ul>
+            <li><strong>MES Downtime Automation</strong> – Saved ~5,000 labor hours annually with VB.NET/MSSQL tools.</li>
+            <li><strong>CI/CD Migration</strong> – Moved from Azure DevOps to GitLab for faster deployments.</li>
+            <li><strong>Production Reporting Platform</strong> – Python/SQL dashboards used daily by 300+ staff.</li>
+            <li><strong>Production Utilization Tool</strong> – Excel/VBA tool used for nearly a decade.</li>
+        </ul>
+    </div>
+
+    <hr style="margin-top:40px;">
+
+    <div class="section" style="page-break-before: always;">
+
+        <h2>Tools & Technologies</h2>
+        <p><strong>Languages:</strong> Python, SQL, VBA, VB.NET, Bash (basic)<br>
+        <strong>Automation:</strong> Git, Azure DevOps, cron, Twilio, CI/CD<br>
+        <strong>Monitoring:</strong> Ignition dashboards, MSSQL tuning, Power BI<br>
+        <strong>Data & Reporting:</strong> MSSQL, PostgreSQL, Pandas, SQLAlchemy<br>
+        <strong>APIs & Integration:</strong> REST/JSON, requests, smtplib, email<br>
+        <strong>Testing & Quality:</strong> pytest, VSCode linting<br>
+        <strong>Version Control:</strong> Git (branching, modular reuse)<br>
+        <strong>Environments:</strong> Windows, Unix/Linux, virtualenv</p>
+    </div>
+
+    <hr style="margin-top:40px;">
+
+    <div class="section">
+        <h2>Education</h2>
+        <p><strong>Kettering University · Flint, MI</strong><br>
+        Coursework toward Bachelor of Engineering in Computer Engineering<br>
+        Attended: Summer 2011 – Fall 2013<br>
+        Completed coursework in Programming (MATLAB, C, Java), Discrete Math, and Engineering Principles</p>
+    </div>
+</div>
+<footer style="margin-top:40px; font-size:12px; color:#999; text-align:center;">
+    Resume version: automation · Last updated: {{last_updated}}
+</footer>
+</body>
+</html>
