@@ -24,13 +24,15 @@ def main():
 
     args = parser.parse_args()
 
+
     # Dynamic context
     context = {
         "linkedin": "https://www.linkedin.com/in/brett-spangler-05498a13a",
         "github": "https://github.com/brett-spangler",
         "email": args.email,
         "phone": args.phone,
-        "last_updated": datetime.today().strftime("%B %d, %Y")
+        "last_updated": datetime.today().strftime("%B %d, %Y"),
+        "resume_version": args.version
     }
 
     # Render resume and footer
