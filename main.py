@@ -21,17 +21,18 @@ def main():
     parser.add_argument("--wkhtmltopdf", type=str, help="Path to wkhtmltopdf executable")
     parser.add_argument("--email", type=str, required=True, help="Email address to include in resume")
     parser.add_argument("--phone", type=str, required=True, help="Phone number to include in resume")
-
+    
     args = parser.parse_args()
 
+    file_path = os.path.abspath(args.output)
+
     # If output file exists, rename it with _YYYYMMDD_HHMMSS before generating new PDF
-    if os.path.exists(args.output):
-        creation_time = os.path.getctime(args.output)
-        from datetime import datetime
+    if os.path.exists(file_path):
+        creation_time = os.path.getmtime(file_path)
         timestamp = datetime.fromtimestamp(creation_time).strftime("%Y%m%d_%H%M%S")
-        base, ext = os.path.splitext(args.output)
+        base, ext = os.path.splitext(file_path)
         archived_name = f"{base}_{timestamp}{ext}"
-        os.rename(args.output, archived_name)
+        os.rename(file_path, archived_name)
 
 
     # Dynamic context
